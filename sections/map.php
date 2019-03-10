@@ -8,8 +8,6 @@
 
     <?php if ($coordinates):
         $latlng = explode(',',  $coordinates);
-        var_dump($coordinates);
-        var_dump($latlng);
         $lat = $latlng[0];
         $lng = $latlng[1];
         echo do_shortcode( '[chilly_map lat='. $lat.' lng='.$lng.' title="' . $marker_title . '"]'  );
