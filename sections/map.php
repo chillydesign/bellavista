@@ -1,16 +1,18 @@
 <?php $coordinates = (get_sub_field('lat_lng'));  ?>
 <?php $marker_title = strval(get_sub_field('marker_title'));  ?>
-<?php $latlng = explode(',',  $coordinates); ?>
-<?php var_dump($coordinates); ?>
-<?php var_dump($latlng); ?>
-<?php $lat = $latlng[0]; ?>
-<?php $lng = $latlng[1]; ?>
-
+<?php $map_content = get_sub_field('map_content'); ?>
 <div class="map_container">
 	<address>
-		<div><?php echo get_sub_field('map_content'); ?></div>
+		<div><?php echo $map_content; ?></div>
 	</address>
 
+    <?php if ($coordinates):
+        $latlng = explode(',',  $coordinates);
+        var_dump($coordinates);
+        var_dump($latlng);
+        $lat = $latlng[0];
+        $lng = $latlng[1];
+        echo do_shortcode( '[chilly_map lat='. $lat.' lng='.$lng.' title="' . $marker_title . '"]'  );
 
-	<?php echo do_shortcode( '[chilly_map lat='. $lat.' lng='.$lng.' title="' . $marker_title . '"]'  ); ?>
+    endif; ?>
 </div>
