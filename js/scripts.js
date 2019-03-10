@@ -52,48 +52,41 @@
 
 
 
-        // CHILLY MAP
-        // CHILLY MAP
-
-
-
-        function drawNewMap( location ) {
-    if (typeof google !== 'undefined') {
-            var map_options = {
-                zoom: 11,
-                mapTypeControl: true,
-                scrollwheel: true,
-                draggable: true,
-                navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
-
-            var map_container =  document.getElementById( location.container  );
-            var map = new google.maps.Map( map_container , map_options);
-
-            var latitude = location.lat;
-            var longitude = location.lng;
-            var latlng = new google.maps.LatLng(  latitude , longitude);
-            var marker = new google.maps.Marker({
-                map: map,
-                position: latlng,
-                title: location.title
-            });
-
-            map.setZoom(12);
-            map.setCenter( latlng );
-
-        } // end of google defined
-        } // end of drawNewMap
-
-        // CHILLY MAP
-        // CHILLY MAP
-
-
-
-
-
-
     });
 
 })(jQuery, this);
+
+
+// CHILLY MAP
+// CHILLY MAP
+function drawNewMap( location ) {
+    if (typeof google !== 'undefined') {
+        var map_options = {
+            zoom: 11,
+            mapTypeControl: true,
+            scrollwheel: true,
+            draggable: true,
+            navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        var map_container =  document.getElementById( location.container  );
+        var map = new google.maps.Map( map_container , map_options);
+
+        var latitude = location.lat;
+        var longitude = location.lng;
+        var latlng = new google.maps.LatLng(  latitude , longitude);
+        var marker = new google.maps.Marker({
+            map: map,
+            position: latlng,
+            title: location.title
+        });
+
+        map.setZoom(12);
+        map.setCenter( latlng );
+
+    } // end of google defined
+} // end of drawNewMap
+
+// CHILLY MAP
+// CHILLY MAP
