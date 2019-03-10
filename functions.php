@@ -63,7 +63,7 @@ if (function_exists('add_theme_support'))
 \*------------------------------------*/
 
 function wf_version(){
-  return '0.0.1';
+  return '0.0.2';
 }
 
 
@@ -571,6 +571,33 @@ function thumbnail_of_post_url( $post_id,  $size='large'  ) {
 
 // }
 // add_action( 'admin_menu', 'remove_menus' );
+
+
+function chilly_map( $atts, $content = null ) {
+
+    $attributes = shortcode_atts( array(
+        'title' => "Title",
+        'lat' => 45,
+        'lng' => 6,
+    ), $atts );
+
+
+    $title = $attributes['title'];
+    $lat = $attributes['lat'];
+    $lng = $attributes['lng'];
+    $container = 'location_' . rand() ;
+
+    $chilly_map = '<div class="map_container" id="'.$container .'"></div>';
+    $chilly_map .= "<script>  drawNewMap( {
+        container: '" . $container . "',
+        lat: ". $lat . ",
+        lng:  ". $lng . ",
+        title:  '" . $title . "'
+    }); </script>";
+    return $chilly_map;
+
+}
+add_shortcode( 'chilly_map', 'chilly_map' );
 
 
 
