@@ -622,22 +622,41 @@ a.sequel {
   text-align: center;
 }
 
+.bx-wrapper {
+    position: relative;
+
+}
+
+
+.bx-controls {
+    position: absolute;
+    top:0;
+    height: 100%;
+    width: 100%;
+    left: 0;
+}
+
 a.bx-prev, a.bx-next {
     position: absolute;
-    left: -40px;
+    left: 0px;
     top: calc(50% - 15px);
     text-indent: -999999px;
     width: 30px;
     height: 30px;
-    background-image: url('img/arrow-left.png');
+    z-index: 50;
+    background-image: url('img/arrow-right.png');
     background-repeat: no-repeat;
     background-size: contain;
 }
 
 a.bx-next {
     left: auto;
-  right:-40px;
-  background-image: url('img/arrow-right.png');
+    right: 0px;
+
+}
+
+a.bx-prev {
+    transform: rotate(180deg);
 }
 
 .slide_photo_background {
