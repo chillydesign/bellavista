@@ -13,11 +13,11 @@
 
 
 
-<?php include('section-loop.php'); ?>
-
-
-
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
+
+    <?php include('section-loop.php'); ?>
+
+
 	<div class="container">
 		<?php the_content(); ?>
 	</div>
