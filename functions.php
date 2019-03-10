@@ -592,12 +592,17 @@ function chilly_map( $atts, $content = null ) {
     $container = 'location_' . rand() ;
 
     $chilly_map = '<div class="map_container" id="'.$container .'"></div>';
-    $chilly_map .= "<script>  drawNewMap( {
-        container: '" . $container . "',
-        lat: ". $lat . ",
-        lng:  ". $lng . ",
-        title:  '" . $title . "'
-    }); </script>";
+    $chilly_map .= "<script>
+    jQuery(function () {
+        drawNewMap( {
+            container: '" . $container . "',
+            lat: ". $lat . ",
+            lng:  ". $lng . ",
+            title:  '" . $title . "'
+        });
+    });
+
+     </script>";
     return $chilly_map;
 
 }
