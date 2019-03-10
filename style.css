@@ -574,7 +574,7 @@ span.sold_leg:before { background: #b7b7b7;}
   box-shadow: 0 0 15px  rgba(0,0,0,0.5)
 }
 
-.map_container {
+.googlemap_container {
     height: 400px;
     width: 100%;
 }
