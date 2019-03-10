@@ -58,7 +58,7 @@
 
 
         function drawNewMap( location ) {
-
+    if (typeof google !== 'undefined') {
             var map_options = {
                 zoom: 11,
                 mapTypeControl: true,
@@ -83,7 +83,7 @@
             map.setZoom(12);
             map.setCenter( latlng );
 
-
+        } // end of google defined
         } // end of drawNewMap
 
         // CHILLY MAP
