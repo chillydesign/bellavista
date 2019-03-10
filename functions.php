@@ -589,7 +589,7 @@ function chilly_map( $atts, $content = null ) {
     $title = $attributes['title'];
     $lat = $attributes['lat'];
     $lng = $attributes['lng'];
-    $container =  md5(  json_encode($attributes)) ;
+    $container = 'map_' . md5(  json_encode($attributes)) ;
 
     $chilly_map = '<div class="googlemap_container" id="'.$container .'"></div>';
     $chilly_map .= "<script>
