@@ -24,11 +24,6 @@
 
 <?php wp_footer(); ?>
 
-
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/featherlight.min.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/featherlight.gallery.min.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.bxslider.min.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/scripts.js?v=5.1"></script>
 <!-- analytics -->
 <script>
 		// (function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){

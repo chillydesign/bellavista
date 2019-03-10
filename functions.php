@@ -27,7 +27,7 @@ if (function_exists('add_theme_support'))
 
     // Add Thumbnail Theme Support
     add_theme_support('post-thumbnails');
-    add_image_size('large', 1400, '', true); // Large Thumbnail
+    add_image_size('large', 1600, '', true); // Large Thumbnail
     add_image_size('medium', 500, '', true); // Medium Thumbnail
     add_image_size('small', 120, '', true); // Small Thumbnail
     add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
@@ -61,6 +61,13 @@ if (function_exists('add_theme_support'))
 /*------------------------------------*\
 	Functions
 \*------------------------------------*/
+
+function wf_version(){
+  return '0.0.1';
+}
+
+
+
 
 function chilly_nav($menu='header_menu'){
 
@@ -118,19 +125,29 @@ function html5blank_header_scripts()
 {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
-        wp_deregister_script( 'jquery' );
-        wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'  , false, NULL, true );
+        $tdu = get_template_directory_uri();
+
+
+        // wp_deregister_script( 'jquery' );
+        // wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'  , false, NULL, true );
         wp_enqueue_script( 'jquery' );
 
 
+        wp_register_script('featherlight', $tdu  . '/js/featherlight.min.js', array(), wf_version(), true  );
+        wp_enqueue_script('featherlight'); // Enqueue it!
+
+        wp_register_script('featherlightgallery', $tdu  . '/js/featherlight.gallery.min.js', array(), wf_version(), true  );
+        wp_enqueue_script('featherlightgallery'); // Enqueue it!
+
+        wp_register_script('bxslider', $tdu  . '/js/jquery.bxslider.min.js', array(), wf_version('jquery'), true  );
+        wp_enqueue_script('bxslider'); // Enqueue it!
+
+
+        wp_register_script('scripts', $tdu  . '/js/scripts.js', array('jquery'), wf_version(), true  );
+        wp_enqueue_script('scripts'); // Enqueue it!
 
 
 
-        //wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
-        //wp_enqueue_script('modernizr'); // Enqueue it!
-
-        //wp_register_script('scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0', true); // Custom scripts
-        //wp_enqueue_script('scripts'); // Enqueue it!
     }
 }
 
@@ -144,18 +161,21 @@ function html5blank_conditional_scripts()
 }
 
 // Load HTML5 Blank styles
-function html5blank_styles()
-{
+function html5blank_styles() {
 
-    wp_register_style('featherlight', get_template_directory_uri() . '/featherlight.min.css', array(), '1.0', 'all');
-    wp_register_style('featherlightgallery', get_template_directory_uri() . '/featherlight.gallery.min.css', array(), '1.0', 'all');
+    $tdu = get_template_directory_uri();
+
+    wp_register_style('featherlight', $tdu . '/featherlight.min.css', array(), '1.0', 'all');
+    wp_register_style('featherlightgallery', $tdu . '/featherlight.gallery.min.css', array(), '1.0', 'all');
     wp_enqueue_style('featherlight'); // Enqueue it!
     wp_enqueue_style('featherlightgallery'); // Enqueue it!
 
-
-    wp_register_style('style', get_template_directory_uri() . '/style.css', array(), '4.4', 'all');
+    wp_register_style('style', $tdu . '/style.css', array(), wf_version()   , 'all');
     wp_enqueue_style('style'); // Enqueue it!
 }
+
+
+
 
 // Register HTML5 Blank Navigation
 function register_html5_menu()
