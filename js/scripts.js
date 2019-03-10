@@ -64,7 +64,7 @@ function drawNewMap( location ) {
         var map_options = {
             zoom: 11,
             mapTypeControl: true,
-            scrollwheel: true,
+            scrollwheel: false,
             draggable: true,
             navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
             mapTypeId: google.maps.MapTypeId.ROADMAP

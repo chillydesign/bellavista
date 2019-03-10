@@ -560,11 +560,14 @@ span.pre_leg:before { background: #dccbb5;}
 span.sold_leg:before { background: #dccbb5;}
 span.sold_leg:before { background: #b7b7b7;}
 
-
-#map_container div {position: relative;}
-#map_container address{
+.map_container {
+    position: relative;
+}
+.map_container div {position: relative;}
+.map_container address {
   position: absolute;
   top:20px;
+  z-index: 10;
   right:35px;
   background: white;
   padding:20px;
