@@ -663,12 +663,20 @@ a.bx-prev {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    height: 300px;
+    height: 550px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .slide_content {
     padding: 20px;
     background: rgba(255,255,255,0.5);
+    max-width: 800px;
+    min-width: 300px;
+    flex: 1 auto;
+    align-self: center;
 }
 
 .posts_slider {position: relative;}
