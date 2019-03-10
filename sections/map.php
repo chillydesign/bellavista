@@ -1,6 +1,7 @@
 <?php $coordinates = (get_sub_field('lat_lng'));  ?>
 <?php $marker_title = strval(get_sub_field('marker_title'));  ?>
 <?php $latlng = explode(',',  $coordinates); ?>
+<?php var_dump($coordinates); ?>
 <?php var_dump($latlng); ?>
 <?php $lat = $latlng[0]; ?>
 <?php $lng = $latlng[1]; ?>
