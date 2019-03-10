@@ -10,6 +10,5 @@
 	</address>
 
 
-    <?php $
 	<?php echo do_shortcode( '[chilly_map lat='. $lat.' lng='.$lng.' title="' . $marker_title . '"]'  ); ?>
 </div>
