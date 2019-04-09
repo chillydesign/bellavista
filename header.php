@@ -21,7 +21,7 @@
 </head>
 <body <?php body_class(); ?>>
 
-<?php// do_action('wpml_add_language_selector'); ?>
+<?php // do_action('wpml_add_language_selector'); ?>
 	<!-- HEADER -->
 	<header id="header">
 		<div class="container">
