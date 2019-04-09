@@ -34,6 +34,7 @@
 
 
 
+
         $window.scroll(function(){
 
             var windowScroll = $window.scrollTop();
@@ -49,147 +50,128 @@
         $('a.gallery').featherlightGallery({
             openSpeed: 300
         });
+        $('a.villa_lightbox').featherlight({
+            openSpeed: 300
+        });
 
 
 
 
 
-        		$('.branding').each(function(){
-        			var $this = $(this);
-        			var $text = $this.html();
-        			var $start = $text.substring(0, 3);
-        			var $end = $text.substring(3, $text.length);
-        			var $html = '<span class="start">' + $start + '</span><span class="end">' + $end + '</span>';
-        			$this.html($html);
-        		})
+        $('.branding').each(function(){
+            var $this = $(this);
+            var $text = $this.html();
+            var $start = $text.substring(0, 3);
+            var $end = $text.substring(3, $text.length);
+            var $html = '<span class="start">' + $start + '</span><span class="end">' + $end + '</span>';
+            $this.html($html);
+        })
 
-        		$('.plus').each(function(){
-        			var $this = $(this);
-        			var $id = $this.attr('id');
-        			var $class= '.' + $id;
-        			$this.on('click', function(){
-        				var $this = $(this);
-        				if($this.hasClass('activeplus')){
-        					$this.removeClass('activeplus');
-        					$($class).slideUp();
-        				} else {
-        					$('.hidden_tr').slideUp();
-        					$('.activeplus').removeClass('activeplus');
-        					$this.addClass('activeplus');
-        					$($class).slideDown();
-        				}
-        			})
+        $('.plus').each(function(){
+            var $this = $(this);
+            var $id = $this.attr('id');
+            var $class= '.' + $id;
+            $this.on('click', function(){
+                var $this = $(this);
+                if($this.hasClass('activeplus')){
+                    $this.removeClass('activeplus');
+                    $($class).slideUp();
+                } else {
+                    $('.hidden_tr').slideUp();
+                    $('.activeplus').removeClass('activeplus');
+                    $this.addClass('activeplus');
+                    $($class).slideDown();
+                }
+            })
 
-        		})
+        })
+
+        var $svg = $("#villas-individuelles");
+        var $villa_trs = $('.villa_tr');
+
+        var $villa_slider = $('.villa_slider').bxSlider({
+            'pager': false,
+            'controls' : true,
+            'auto' : false,
+            onSlideAfter: function(slide) {
+                $('g', $svg).removeClass('visible');
+                showVillaOnSVG(  slide );
 
 
-        		$('.villa_tr.unavailable').each(function(){
-        			var $layer = $(this).data('layer');
-        			$($layer).addClass( "greyhouse"  );
-        		})
+            }
+        });
 
-        		$('.villa_tr.booked').each(function(){
-        			var $layer = $(this).data('layer');
-        			$($layer).addClass( "lightbrownhouse"  );
-        		})
 
-        		var $svg = $("#villas-individuelles");
+        function showVillaOnSVG( $villatr) {
+            $('g', $svg).removeClass('visible');
+            var $layer = $villatr.data('layer');
+            $($layer, $svg).addClass("visible");
+            console.log($layer);
 
-        		$('tr.villa_tr, .villa_group').on('touchstart', function(){
+        }
+        showVillaOnSVG($villa_trs.first());
 
-        			var $layer = $(this).data('layer');
-        			$('g').removeClass('visible');
-        			$($layer, $svg).addClass( "visible"  );
-        		})
 
-        		$('tr.villa_tr, .villa_group').on('mouseover', function(){
 
-        			var $layer = $(this).data('layer');
 
-        			// $($layer, $svg).attr('class', "visible"  );
-        			$($layer, $svg).addClass( "visible"  );
-        		}).on('mouseout', function(){
+        $('.villa_tr.unavailable').each(function(){
+            var $layer = $(this).data('layer');
+            $($layer).addClass( "greyhouse"  );
+        })
 
-        			var $layer = $(this).data('layer');
-        			// $($layer, $svg).attr('class', ""  );
-        			$($layer, $svg).removeClass("visible");
+        $('.villa_tr.booked').each(function(){
+            var $layer = $(this).data('layer');
+            $($layer).addClass( "lightbrownhouse"  );
+        })
 
-        		})
 
-        		$('g').on('mouseover', function(){
+        $('.villa_tr').on('touchstart', function(){
+            showVillaOnSVG(  $(this) );
 
-        			// $(this).attr('class', "visible"  );
-        			$(this).addClass( "visible"  );
-        		}).on('mouseout', function(){
+        })
 
-        			// $(this).attr('class', ""  );
-        			$(this).removeClass("visible");
 
-        		})
+        $('g', $svg).on('mouseover', function(){
+            // $(this).attr('class', "visible"  );
+            var $this = $(this);
+            $this.addClass( "half_visible"  );
 
-        		$('.villa_group1').on('click', function(){
-        			if ($('.villa_group1').hasClass('rotate_arrow')) {$('.villa_table1').slideUp(); $('.villa_group1').removeClass('rotate_arrow'); }
-        			else {
-        				$('.rotate_arrow').removeClass('rotate_arrow');
-        				$('.villa_table').slideUp();
-        				$('.villa_table1').slideDown();
-        				$('.villa_group1').addClass('rotate_arrow');
-        			}
 
-        		})
-        		$('.villa_group2').on('click', function(){
-        			if ($('.villa_group2').hasClass('rotate_arrow')) {$('.villa_table2').slideUp(); $('.villa_group2').removeClass('rotate_arrow'); }
-        			else {
-        				$('.rotate_arrow').removeClass('rotate_arrow');
-        				$('.villa_table').slideUp();
-        				$('.villa_table2').slideDown();
-        				$('.villa_group2').addClass('rotate_arrow');
-        			}
+        }).on('mouseout', function(){
+            var $this = $(this);
+            // $(this).attr('class', ""  );
+            $this.removeClass("half_visible");
 
-        		})
-        		$('.villa_group3').on('click', function(){
-        			if ($('.villa_group3').hasClass('rotate_arrow')) {$('.villa_table3').slideUp(); $('.villa_group3').removeClass('rotate_arrow'); }
-        			else {
-        				$('.rotate_arrow').removeClass('rotate_arrow');
-        				$('.villa_table').slideUp();
-        				$('.villa_table3').slideDown();
-        				$('.villa_group3').addClass('rotate_arrow');
-        			}
+        }).on('click', function() {
+            // when click on svg, find the villa its referring to and slide the villaslider to the right place
+            var $this = $(this);
+            var $id = $this.attr('id');
+            var $villa = $('.' + $id);
+            if ($villa.length > 0) {
+                var $index = $villa.data('index');
+                $villa_slider.goToSlide($index);
+            }
 
-        		})
-        		$('.villa_group4').on('click', function(){
-        			if ($('.villa_group4').hasClass('rotate_arrow')) {$('.villa_table4').slideUp(); $('.villa_group4').removeClass('rotate_arrow'); }
-        			else {
-        				$('.rotate_arrow').removeClass('rotate_arrow');
-        				$('.villa_table').slideUp();
-        				$('.villa_table4').slideDown();
-        				$('.villa_group4').addClass('rotate_arrow');
-        			}
-
-        		})
+        });
 
 
 
 
 
 
-        		// $('.villa_group2').on('click', function(){$('.villa_table2').slideToggle(); $('.villa_group2').toggleClass('rotate_arrow');})
-        		// $('.villa_group3').on('click', function(){$('.villa_table3').slideToggle(); $('.villa_group3').toggleClass('rotate_arrow');})
-        		// $('.villa_group4').on('click', function(){$('.villa_table4').slideToggle(); $('.villa_group4').toggleClass('rotate_arrow');})
+        $('form#documents_form').on('submit', function(e){
+            e.preventDefault();
+            $.ajax({
+                url: "../wp-content/themes/grumes/sections/mail.php",
+                data: $(this).serializeArray(),
+                method: 'POST'
+            }).done(function(data) {
+                $('#form_message').html(data);
+                $('#form_message').show();
 
-        		$('form#documents_form').on('submit', function(e){
-        			e.preventDefault();
-        			$.ajax({
-        				url: "../wp-content/themes/grumes/sections/mail.php",
-        				data: $(this).serializeArray(),
-        				method: 'POST'
-        			}).done(function(data) {
-        				$('#form_message').html(data);
-        				$('#form_message').show();
+            });
 
-        			});
-
-        		})
+        })
 
 
 
