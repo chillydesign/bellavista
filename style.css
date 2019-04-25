@@ -386,11 +386,15 @@ section {
 }
 
 
-section.section_grey, div.grey {
+section.section_grey {
     background:#f5f5f5;
 }
 
-
+ div.grey {
+     background:#f5f5f5;
+     padding: 50px;
+     margin: -50px 0;
+ }
 
 
 section.section_map {
