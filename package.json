@@ -1,0 +1,27 @@
+{
+  "name": "bellavista",
+  "version": "1.0.0",
+  "description": "Bellavista wordpress theme 2019",
+  "main": "index.php",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.1",
+    "gulp-real-favicon": "^0.3.2"
+  },
+  "scripts": {
+    "test": "say hello"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chillydesign/bellavista.git"
+  },
+  "keywords": [
+    "wordpress"
+  ],
+  "author": "Chilly Design",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chillydesign/bellavista/issues"
+  },
+  "homepage": "https://github.com/chillydesign/bellavista#readme"
+}
