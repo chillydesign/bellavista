@@ -29,7 +29,7 @@
             'pager': false,
             'controls' : true,
             // 'mode' : 'fade',
-            'auto' : false
+            'auto' : true
         });
 
 
