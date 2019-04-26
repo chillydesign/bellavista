@@ -61,7 +61,7 @@
                                     <li><strong>Surface pondérée:</strong>  <?php the_sub_field('ponderee'); ?> m<sup>2</sup></li>
                                     <li><strong>Cave:</strong>  <?php the_sub_field('cave'); ?></li>
                                 <li><strong>Prix de vente:</strong> <?php echo $prix_text; ?></li>
-                                <strong>Parking en sous-sol:</strong>  <?php the_sub_field('parking'); ?></li>
+                                <li><strong>Parking en sous-sol:</strong>  <?php the_sub_field('parking'); ?></li>
                             </ul>
 
 
