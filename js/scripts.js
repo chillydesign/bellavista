@@ -27,11 +27,21 @@
 
         $('.bxslider').bxSlider({
             'pager': false,
-            'controls' : true,
+            'controls' : false,
             // 'mode' : 'fade',
             'auto' : true
         });
 
+
+        var $news_bxslider = $('.news_bxslider');
+        var $news_auto =  (  $news_bxslider.children().length < 2 ) ? false : true;
+        $news_bxslider.bxSlider({
+            'pager': false,
+            'controls' : true,
+            // 'mode' : 'fade',
+            'auto' : $news_auto,
+            'mode' : 'fade',
+        });
 
 
 

@@ -20,7 +20,7 @@
 	<div  class="container">
 		<div class="posts_slider">
 	<!-- <h2><a href="<?php echo $home_url; ?>/actualites">Actualites</a></h2> -->
-		<ul class="bxslider posts">
+		<ul class="news_bxslider  posts">
 		<?php  if ($posts_loop->have_posts() ) :  while($posts_loop->have_posts()) : $posts_loop->the_post();  ?>
 		<li class="post">
 			<div class="row">
