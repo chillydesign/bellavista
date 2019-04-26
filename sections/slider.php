@@ -1,3 +1,5 @@
+
+<div class="slider_inner">
 <ul class="bxslider">
 
 
@@ -13,4 +15,5 @@
 	<?php endwhile; ?>
 
 
-</ul>	
+</ul>
+</div>
