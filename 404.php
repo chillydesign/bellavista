@@ -4,11 +4,11 @@
 <?php $image = thumbnail_of_post_url($home_id, 'large'); ?>
 <?php  $current_lang =  ( defined('ICL_LANGUAGE_CODE') ) ? ICL_LANGUAGE_CODE  : 'fr'; ?>
 <div class="parallax_container">
-    <div class="parallax_image" style="background-image:url('<?php echo $image; ?>')"></div>
+    <div class="parallax_image" style="background-image:url('<?php echo get_home_url(); ?>/wp-content/uploads/2019/04/1289_Ext_09.jpg')"></div>
 </div>
 
 
-<section  class="section  section_news">
+<section  class="section  section_news" style="margin-bottom:-50px">
 
     <div class="brand_bg" >
         <div class="container">
