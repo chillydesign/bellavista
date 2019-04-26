@@ -13,7 +13,7 @@
     <div class="brand_bg" >
         <div class="container">
 
-            <?php if (  $current_lang  = 'fr'): ?>
+            <?php if (  $current_lang  == 'fr'): ?>
             <h1>Page non trouvée</h1>
             <p>La page que vous recherchez n'existe pas ou a été déplacée.</p>
             <a href="<?php echo home_url(); ?>"><h6>Retour à l'accueil</h6></a>
