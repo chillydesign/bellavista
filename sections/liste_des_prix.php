@@ -24,8 +24,10 @@
                     <?php $i = 0; while ( have_rows('villas')) : the_row(); ?>
 
                         <?php $statut = get_sub_field('statut'); ?>
-                        <?php $prix = get_sub_field('prix_de_vente'); ?>
+                        <?php $prix_de_vente = get_sub_field('prix_de_vente'); ?>
+                        <?php $prix = ($prix_de_vente) ? $prix_de_vente : 0; ?>
                         <?php $villa = get_sub_field('villa'); ?>
+                        <?php $villa_slug = sanitize_title($villa); ?>
                         <?php $parcelle =  get_sub_field('parcelle'); ?>
                         <?php $image =  get_sub_field('image'); ?>
                         <?php
@@ -49,7 +51,7 @@
                         ?>
 
 
-                        <div class="villa_tr villa<?php echo $villa; ?> <?php echo $villastatusclass; ?>" data-index=<?php echo  $i; ?>  data-layer="#villa<?php  echo $villa; ?>">
+                        <div class="villa_tr villa<?php echo $villa_slug; ?> <?php echo $villastatusclass; ?>" data-index=<?php echo  $i; ?>  data-layer="#villa<?php  echo $villa_slug; ?>">
                             <h4>Villa: n°<?php echo $villa; ?></h4>
                             <ul>
 
