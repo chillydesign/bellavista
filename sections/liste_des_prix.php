@@ -21,12 +21,12 @@
             <div class="col-sm-4 ">
                 <div class="villa_slider">
 
-                    <?php $i = 0; while ( have_rows('appartements')) : the_row(); ?>
+                    <?php $i = 0; while ( have_rows('villas')) : the_row(); ?>
 
                         <?php $statut = get_sub_field('statut'); ?>
                         <?php $prix_de_vente = get_sub_field('prix_de_vente'); ?>
                         <?php $prix = ($prix_de_vente) ? $prix_de_vente : 0; ?>
-                        <?php $villa = get_sub_field('appartement'); ?>
+                        <?php $villa = get_sub_field('villa'); ?>
                         <?php $villa_slug = sanitize_title($villa); ?>
                         <?php $image =  get_sub_field('image'); ?>
                         <?php
