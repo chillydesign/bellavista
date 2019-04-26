@@ -603,12 +603,12 @@ section.section_two_thirds_one_third {}
 
 
     g.half_visible {
-        opacity: 0.4;
+        opacity: 0.94;
         cursor: pointer;
     }
 
     g.visible {
-        opacity: 0.94;
+        opacity: 0.4;
     }
 
 
