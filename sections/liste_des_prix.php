@@ -21,14 +21,13 @@
             <div class="col-sm-4 ">
                 <div class="villa_slider">
 
-                    <?php $i = 0; while ( have_rows('villas')) : the_row(); ?>
+                    <?php $i = 0; while ( have_rows('appartements')) : the_row(); ?>
 
                         <?php $statut = get_sub_field('statut'); ?>
                         <?php $prix_de_vente = get_sub_field('prix_de_vente'); ?>
                         <?php $prix = ($prix_de_vente) ? $prix_de_vente : 0; ?>
-                        <?php $villa = get_sub_field('villa'); ?>
+                        <?php $villa = get_sub_field('appartement'); ?>
                         <?php $villa_slug = sanitize_title($villa); ?>
-                        <?php $parcelle =  get_sub_field('parcelle'); ?>
                         <?php $image =  get_sub_field('image'); ?>
                         <?php
                         if($statut == 'available'){
@@ -52,19 +51,18 @@
 
 
                         <div class="villa_tr villa<?php echo $villa_slug; ?> <?php echo $villastatusclass; ?>" data-index=<?php echo  $i; ?>  data-layer="#villa<?php  echo $villa_slug; ?>">
-                            <h4>Villa: n°<?php echo $villa; ?></h4>
+                            <h4>Appartement <?php echo $villa; ?></h4>
                             <ul>
 
                                 <li>
-                                    <strong>Surface <span class="disappear1">de la </span>parcelle:</strong>  <?php echo $parcelle; ?> m<sup>2</sup></li>
-                                <li class="disappear2"><strong>Part de la dépendance:</strong><?php the_sub_field('dependance'); ?> m<sup>2</sup></li>
-                                <li><strong>Surface brute:</strong> <?php the_sub_field('surface_brute'); ?> m<sup>2</sup></li>
-                                <li class="disappear2"><strong>Terrasse au rez<span class="disappear1">-de-chaussée</span>: </strong><?php the_sub_field('terrasse_rez'); ?> m<sup>2</sup></li>
-                                <li class="disappear2"><strong>Terrasse d'attique:</strong> <?php the_sub_field('terrasse_attique'); ?> m<sup>2</sup></li>
-                                <li class="disappear2"><strong>Surface des extérieurs: </strong><?php the_sub_field('exterieurs'); ?> m<sup>2</sup></li>
-                                <li class="disappear2"><strong>Places extérieures:</strong> <?php the_sub_field('places'); ?></li>
-
+                                    <strong>Surface appartement:</strong>  <?php the_sub_field('appartement'); ?> m<sup>2</sup></li>
+                                    <strong>Surface balcon:</strong>  <?php the_sub_field('balcon'); ?> m<sup>2</sup></li>
+                                    <strong>Surface terrasse:</strong>  <?php the_sub_field('terrasse'); ?> m<sup>2</sup></li>
+                                    <strong>Surface jardin:</strong>  <?php the_sub_field('jardin'); ?> m<sup>2</sup></li>
+                                    <strong>Surface pondérée:</strong>  <?php the_sub_field('ponderee'); ?> m<sup>2</sup></li>
+                                    <strong>Cave:</strong>  <?php the_sub_field('cave'); ?></li>
                                 <li><strong>Prix de vente:</strong> <?php echo $prix_text; ?></li>
+                                <strong>Parking en sous-sol:</strong>  <?php the_sub_field('parking'); ?></li>
                             </ul>
 
 
