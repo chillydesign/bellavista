@@ -420,6 +420,9 @@ section.section_grey {
 
  }
 
+body div.brand_bg a:hover {
+    color: white;
+}
 
 section.section_map {
     border-top: solid 3px #b2bf56;
