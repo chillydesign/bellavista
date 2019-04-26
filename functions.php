@@ -63,7 +63,7 @@ if (function_exists('add_theme_support'))
 \*------------------------------------*/
 
 function wf_version(){
-  return '0.1.1';
+  return '0.1.2';
 }
 
 
