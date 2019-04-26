@@ -72,7 +72,7 @@ if(!empty($_POST['email'])) {
 $body .= $download_sentence;
  foreach ($docs as $value) {
   $pieces = explode("|", $value);
-  $link = '<a style="display: block; padding: 8px; text-align: center; background: #b2bf56; color: white; font-weight: bold; text-decoration: none; margin: 20px 0 0; " href ="' . $pieces[1] . '" target="_blank">' .  $pieces[0] . '</a> ';
+  $link = '<a style="display: block; padding: 8px; text-align: center; background: #1e3a21; color: white; font-weight: bold; text-decoration: none; margin: 20px 0 0; " href ="' . $pieces[1] . '" target="_blank">' .  $pieces[0] . '</a> ';
   $body .= $link;
  }
 
