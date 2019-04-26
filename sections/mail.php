@@ -1,24 +1,24 @@
 <?php
 
- 
+
 if(!empty($_POST['email'])) {
-  
+
   $email =$_POST['email'];
- 
- 
+
+
     function clean_string($string) {
- 
+
       $bad = array("content-type","bcc:","to:","cc:","href");
- 
+
       return str_replace($bad,"",$string);
- 
-    }    
+
+    }
 
 
 
- 
+
     // validation expected data exists
-    
+
 
     if(empty($_POST['docs'])) {
 
@@ -28,10 +28,10 @@ if(!empty($_POST['email'])) {
       $docs = $_POST['docs'];
       if (count($docs) == 1) {$download_sentence = '<p>Téléchargez le document demandé ci-dessous:</p>'; }
       else {$download_sentence = '<p>Téléchargez les documents demandés ci-dessous:</p>';}
-      
+
 
       require '../../../../vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
-      
+
       $mail = new PHPMailer;
       $mail->CharSet = 'UTF-8';
 
@@ -42,7 +42,7 @@ if(!empty($_POST['email'])) {
       $mail->Username = 'promolac.geneve@gmail.com';                 // SMTP username
       $mail->Password = 'wjnuvNZF$q';                           // SMTP password
       $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-      $mail->Port = 587;   
+      $mail->Port = 587;
       //$mail->SMTPDebug  = 2;
 
       $mail->setFrom('contact@villasdesgrumes.ch', 'PromoLAC');
@@ -70,11 +70,11 @@ if(!empty($_POST['email'])) {
                     <p>Pour plus d\'informations n\'hésitez pas à nous contacter au +41 22 839 30 40 ou par email à l\'adresse <a href="mailto:contact@promolac.ch">contact@promolac.ch</a></p>';
 
 $body .= $download_sentence;
- foreach ($docs as $value) { 
-  $pieces = explode("|", $value); 
-  $link = '<a style="display: block; padding: 8px; text-align: center; background: #bb9f79; color: white; font-weight: bold; text-decoration: none; margin: 20px 0 0; " href ="' . $pieces[1] . '" target="_blank">' .  $pieces[0] . '</a> ';
+ foreach ($docs as $value) {
+  $pieces = explode("|", $value);
+  $link = '<a style="display: block; padding: 8px; text-align: center; background: #b2bf56; color: white; font-weight: bold; text-decoration: none; margin: 20px 0 0; " href ="' . $pieces[1] . '" target="_blank">' .  $pieces[0] . '</a> ';
   $body .= $link;
- } 
+ }
 
  $body .= '
                 </td>
@@ -100,15 +100,15 @@ $body .= $download_sentence;
 
 
     }
- 
-     
- 
 
- 
+
+
+
+
 } elseif(empty($_POST['email']) AND empty($_POST['docs'])) {echo 'Veuillez saisir une adresse email et sélectionner au moins un document';}
 
 else {
   echo 'Veuillez saisir une adresse email ';
 }
- 
+
 ?>
