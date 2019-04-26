@@ -185,9 +185,9 @@ function html5blank_styles() {
 function register_html5_menu()
 {
     register_nav_menus(array( // Using array to specify more menus if needed
-        'header_menu' => __('Header Menu', 'organicfuel'), // Main Navigation
-        'footer_menu' => __('Footer Menu', 'organicfuel'), // Sidebar Navigation
-        'social_menu' => __('Social Menu', 'organicfuel') // Extra Navigation if needed (duplicate as many as you need!)
+        'header_menu' => __('Header Menu', 'bellavista'), // Main Navigation
+        'footer_menu' => __('Footer Menu', 'bellavista'), // Sidebar Navigation
+        'language_menu' => __('Language Menu', 'bellavista') // Extra Navigation if needed (duplicate as many as you need!)
     ));
 }
 
