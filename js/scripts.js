@@ -37,7 +37,7 @@
         var $news_auto =  (  $news_bxslider.children().length < 2 ) ? false : true;
         $news_bxslider.bxSlider({
             'pager': false,
-            'controls' : true,
+            'controls' : !$news_auto,
             // 'mode' : 'fade',
             'auto' : $news_auto,
             'mode' : 'fade',
