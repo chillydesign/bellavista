@@ -224,11 +224,11 @@ table { border-collapse: collapse;  border-spacing: 0}
     }
 
     header li a:link, header li a:active, header li a:visited {
-        color: #b2bf56 ;
+        color: #1e3a21 ;
     }
 
     header li a:hover {
-        background-color: #85bf56;
+        background-color: #1e3a21;
         color: white;
     }
 
