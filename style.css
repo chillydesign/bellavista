@@ -241,14 +241,14 @@ table { border-collapse: collapse;  border-spacing: 0}
         text-indent: 99999999999px;
         width: 0px;
         height: 50px;
-        background-image: url(img/facebook-grumes.jpg);
+        background-image: url(img/icon_facebook.png);
         background-size:contain;
         background-repeat: no-repeat;
         background-position: bottom 16px right;
         padding: 12px;
     }
     header li.youtube a{
-        background-image: url(img/youtube-grumes.jpg); margin-left: 5px;
+        background-image: url(img/icon_youtube.png); margin-left: 5px;
     }
     header li.facebook a:hover, header li.facebook a:active, header li.facebook a:focus, header li.youtube a:hover, header li.youtube a:active, header li.youtube a:focus  {
         background-color: white!important;
