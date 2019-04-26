@@ -507,10 +507,11 @@ section.section_two_thirds_one_third {}
         text-align: center;
     }
     section.section_liste_des_prix .bx-controls-direction {
-        background: #222;
-        border-top: 3px solid white;
-        padding: 10px;
-        position: static;
+        background: #f1f1f1;
+        padding: 15px 10px 10px;
+        position: absolute;
+        top:0;
+        right:0;
         margin: 0;
 
     }
@@ -757,7 +758,7 @@ section.section_two_thirds_one_third {}
         width: 30px;
         height: 30px;
         z-index: 50;
-        background-image: url('img/arrow-right.png');
+        background-image: url('img/arrow-right-dark.png');
         background-repeat: no-repeat;
         background-size: contain;
     }

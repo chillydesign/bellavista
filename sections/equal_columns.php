@@ -1,6 +1,6 @@
 <?php $column_count =  sizeof(  get_sub_field('column')  ); ?>
 <?php $column_class = count_to_bootstrap_class($column_count); ?>
-<?php $grey_class = get_sub_field('bg') ? 'grey' : ''; ?>
+<?php $grey_class = get_sub_field('bg') == 'grey' ? 'grey' : ''; ?>
 
 <div class="<?php echo $grey_class; ?>">
 <div class="container">
