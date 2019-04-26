@@ -54,13 +54,12 @@
                             <h4>Appartement <?php echo $villa; ?></h4>
                             <ul>
 
-                                <li>
-                                    <strong>Surface appartement:</strong>  <?php the_sub_field('appartement'); ?> m<sup>2</sup></li>
-                                    <strong>Surface balcon:</strong>  <?php the_sub_field('balcon'); ?> m<sup>2</sup></li>
-                                    <strong>Surface terrasse:</strong>  <?php the_sub_field('terrasse'); ?> m<sup>2</sup></li>
-                                    <strong>Surface jardin:</strong>  <?php the_sub_field('jardin'); ?> m<sup>2</sup></li>
-                                    <strong>Surface pondérée:</strong>  <?php the_sub_field('ponderee'); ?> m<sup>2</sup></li>
-                                    <strong>Cave:</strong>  <?php the_sub_field('cave'); ?></li>
+                                <li><strong>Surface appartement:</strong>  <?php the_sub_field('appartement'); ?> m<sup>2</sup></li>
+                                    <li><strong>Surface balcon:</strong>  <?php the_sub_field('balcon'); ?> m<sup>2</sup></li>
+                                    <li><strong>Surface terrasse:</strong>  <?php the_sub_field('terrasse'); ?> m<sup>2</sup></li>
+                                    <li><strong>Surface jardin:</strong>  <?php the_sub_field('jardin'); ?> m<sup>2</sup></li>
+                                    <li><strong>Surface pondérée:</strong>  <?php the_sub_field('ponderee'); ?> m<sup>2</sup></li>
+                                    <li><strong>Cave:</strong>  <?php the_sub_field('cave'); ?></li>
                                 <li><strong>Prix de vente:</strong> <?php echo $prix_text; ?></li>
                                 <strong>Parking en sous-sol:</strong>  <?php the_sub_field('parking'); ?></li>
                             </ul>
