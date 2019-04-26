@@ -603,12 +603,12 @@ section.section_two_thirds_one_third {}
 
 
     g.half_visible {
-        opacity: 0.94;
+        opacity: 0.5;
         cursor: pointer;
     }
 
     g.visible {
-        opacity: 0.4;
+        opacity: 0.8;
     }
 
 
@@ -616,6 +616,7 @@ section.section_two_thirds_one_third {}
         stroke: white;
         stroke-width: 4px;
     }
+
 
     .greyhouse polygon , .greyhouse polyline{
         fill: #b7b7b7;
@@ -625,6 +626,9 @@ section.section_two_thirds_one_third {}
         fill: #dccbb5;
     }
 
+    g.visible polygon {
+      fill: rgba(178, 191, 86, 0.3)
+    }
     .villa_group {
         font-size: 1.6em;
         font-weight: bold;
