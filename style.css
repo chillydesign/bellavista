@@ -816,6 +816,10 @@ section.section_slider {}
         transform: rotate(180deg);
     }
 
+    ul.bxslider {
+    padding: 0;
+}
+
     .slide_photo_background {
         background-repeat: no-repeat;
         background-position: center center;
