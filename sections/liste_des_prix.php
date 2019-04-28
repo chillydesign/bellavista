@@ -69,14 +69,15 @@
 
 
                             <?php if($image): ?>
-                                <a class="villa_lightbox" href="<?php echo $image['url']; ?>">Image</a>
+                                <a class="villa_lightbox" href="<?php echo $image['url']; ?>">Plan</a>
                                 <!-- <img class="table_img" src="<?php echo $image['url']; ?>"> -->
                             <?php endif; // end if image; ?>
 
                             <a href="<?php echo get_home_url();?>/documents">Brochure</a>
                             <?php $nnn = (get_sub_field('number')) ? 'la villa ' .  get_sub_field('number') : 'une des villas' ; ?>
                             <?php $str =  htmlentities(' contact@promolac.ch?subject=Intérêt pour une propriété - Villas des Grumes&body=Bonjour Monsieur%2C%0A%0AJe serais intéressé par '  . $nnn  .   ' de votre promotion Villas Des Grumes. Pourrions-nous convenir d\'un rendez-vous pour en discuter%3F%0A%0ACordialement,'  ); ?>
-                            <a href="mailto:<?php echo $str; ?>">Contact</a>
+                            <!-- <a href="mailto:<?php //echo $str; ?>">Contact</a> -->
+                            <a href="<?php echo get_home_url(); ?>/contact">Contact</a>
                                     </div>
                         </div>
 
