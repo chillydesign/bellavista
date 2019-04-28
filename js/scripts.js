@@ -25,13 +25,13 @@
             $('#header nav ').toggleClass('visible');
         });
 
-        var $bxslider = $('.news_bxslider');
+        var $bxslider = $('.bxslider');
         var $auto =  (  $bxslider.children().length < 2 ) ? false : true;
         $bxslider.bxSlider({
             'pager': false,
-            'controls' : !$news_auto,
+            'controls' : !$auto,
             // 'mode' : 'fade',
-            'auto' : $news_auto,
+            'auto' : $auto,
             'mode' : 'fade'
         });
 
@@ -43,8 +43,7 @@
             'pager': false,
             'controls' : !$news_auto,
             // 'mode' : 'fade',
-            'auto' : $news_auto,
-            'mode' : 'fade'
+            'auto' : $news_auto
         });
 
 
