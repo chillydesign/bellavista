@@ -25,12 +25,16 @@
             $('#header nav ').toggleClass('visible');
         });
 
-        $('.bxslider').bxSlider({
+        var $bxslider = $('.news_bxslider');
+        var $auto =  (  $bxslider.children().length < 2 ) ? false : true;
+        $bxslider.bxSlider({
             'pager': false,
-            'controls' : false,
+            'controls' : !$news_auto,
             // 'mode' : 'fade',
-            'auto' : true
+            'auto' : $news_auto,
+            'mode' : 'fade'
         });
+
 
 
         var $news_bxslider = $('.news_bxslider');
@@ -40,7 +44,7 @@
             'controls' : !$news_auto,
             // 'mode' : 'fade',
             'auto' : $news_auto,
-            'mode' : 'fade',
+            'mode' : 'fade'
         });
 
 
