@@ -52,13 +52,13 @@
 
                         <div class="villa_tr villa<?php echo $villa_slug; ?> <?php echo $villastatusclass; ?>" data-index=<?php echo  $i; ?>  data-layer="#villa<?php  echo $villa_slug; ?>">
                             <h4>Appartement <?php echo $villa; ?></h4>
-                            <h5>Appartement <?php echo get_sub_field('rooms'); ?> pièces
+                            <h5 class="rooms">Appartement <?php echo get_sub_field('rooms'); ?> pièces</h5>
                             <ul>
 
                                 <li><strong>Appartement:</strong>  <?php the_sub_field('appartement'); ?> m<sup>2</sup></li>
                                     <li><strong>Terrasse couverte:</strong>  <?php the_sub_field('balcon'); ?> m<sup>2</sup></li>
                                     <li><strong>Terrasse non couverte:</strong>  <?php the_sub_field('terrasse'); ?> m<sup>2</sup></li>
-                                    <li><strong>Jardin:</strong>  <?php the_sub_field('jardin'); ?> m<sup>2</sup></li>
+                                    <li><strong>Jardin:<br></strong>  <?php the_sub_field('jardin'); ?> m<sup>2</sup></li>
                                     <li><strong>Surface pondérée:</strong>  <?php the_sub_field('ponderee'); ?> m<sup>2</sup></li>
                                     <li><strong>Cave:</strong>  <?php the_sub_field('cave'); ?></li>
                                 <li><strong>Prix de vente:</strong> <?php echo $prix_text; ?><br><em>Parking non compris</em></li>
