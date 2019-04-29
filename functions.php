@@ -133,7 +133,8 @@ function html5blank_header_scripts()
         wp_enqueue_script( 'jquery' );
 
 
-        wp_register_script('gmaps', '//maps.google.com/maps/api/js?key=AIzaSyAxQfqRqtPLAW4BolFMCxTiv9y--R8CXdU', array(), wf_version(), true  );
+        $maps_key = 'AIzaSyDVE4JYrQfVCi-xUFOYKYp2OTWhHfk-SWo';
+        wp_register_script('gmaps', '//maps.google.com/maps/api/js?key=' . $maps_key, array(), wf_version(), true  );
         wp_enqueue_script('gmaps'); // Enqueue it!
 
 
