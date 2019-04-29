@@ -48,9 +48,9 @@ if(!empty($_POST['email'])) {
       $mail->setFrom('contact@bellavistaparc.ch', 'BatiLAC');
       //$mail->addAddress('harvey.charles@gmail.com', 'Charles Harvey');     // Add a recipient
       $mail->addAddress($email);               // Name is optional
-      $mail->addReplyTo('contact@promolac.ch', 'BatiLAC');
+      $mail->addReplyTo('contact@batilac.ch', 'BatiLAC');
       // $mail->addCC('cc@example.com');
-      $mail->addBCC('contact@promolac.ch');
+      $mail->addBCC('contact@batilac.ch');
 
       //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
       //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
@@ -67,7 +67,7 @@ if(!empty($_POST['email'])) {
                 <td style="padding: 40px; font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555;">
                     <h1 style="line-height:120%;padding:00px;margin:0 0 30px">Bella-Vista Parc - Documentation</h1>
                     <p>Merci pour votre intérêt pour notre nouvelle promotion Bella-Vista Parc à Vessy. Vous trouverez en pièce jointe la documentation demandée. </p>
-                    <p>Pour plus d\'informations n\'hésitez pas à nous contacter au +41 22 839 30 40 ou par email à l\'adresse <a href="mailto:contact@promolac.ch">contact@promolac.ch</a></p>';
+                    <p>Pour plus d\'informations n\'hésitez pas à nous contacter au +41 22 839 30 40 ou par email à l\'adresse <a href="mailto:contact@batilac.ch">contact@batilac.ch</a></p>';
 
 $body .= $download_sentence;
  foreach ($docs as $value) {
