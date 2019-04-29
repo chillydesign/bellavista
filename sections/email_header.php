@@ -146,8 +146,8 @@
                 <tr>
 					<td bgcolor="#ffffff" align="center">
 
-                        <a href="https://webfactor.ch/projets/grumes" target="_blank"><img src="https://webfactor.ch/projets/grumes/wp-content/themes/grumes/img/logo-bellavista.png" width="600" height=""  border="0" align="left" style="width: 160px; margin: 15px;">
-						<img src="https://webfactor.ch/projets/grumes/wp-content/uploads/2017/02/promolac-villas-grumes-pano.jpg" width="600" height="" border="0" align="center" style="width: 100%; max-width: 600px;"></a>
+                        <a href="https://bellavistaparc.ch" target="_blank"><img src="https://webfactor.ch/projets/bellavista/wp-content/themes/bellavista/img/logo-bellavista.png" width="600" height=""  border="0" align="left" style="width: 160px; margin: 15px;">
+						<img src="https://bellavistaparc.ch/wp-content/uploads/2019/04/1289_Ext_00.jpg" width="600" height="" border="0" align="center" style="width: 100%; max-width: 600px;"></a>
 					</td>
                 </tr>
                 <!-- Hero Image, Flush : END -->

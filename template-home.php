@@ -40,7 +40,7 @@
 			<div class="col-sm-8">
 			<h4><a href=" <?php echo  get_the_permalink(); ?>"><?php the_title(); ?></a></h4>
 			<p><?php echo get_the_excerpt(); ?></p>
-			<a href="<?php echo  get_the_permalink(); ?>" class="sequel">Lire plus</a><a href="<?php echo  home_url(); ?>/news" class="sequel">Toute l'actualité Villas des Grumes</a>
+			<a href="<?php echo  get_the_permalink(); ?>" class="sequel">Lire plus</a><a href="<?php echo  home_url(); ?>/news" class="sequel">Toute l'actualité Bella-Vista Parc</a>
 			</div>
 			</div>
 		</li>

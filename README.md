@@ -1,1 +1,1 @@
-#  Bella Vista Theme For Grumes by Webfactor
+#  Bella Vista Theme by Webfactor

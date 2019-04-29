@@ -26,7 +26,9 @@
         });
 
         var $bxslider = $('.bxslider');
+        console.log($bxslider.children().length );
         var $auto =  ($bxslider.children().length < 2 ) ? false : true;
+        console.log($auto);
         $bxslider.bxSlider({
             'pager': false,
             'controls' : false,
@@ -183,7 +185,7 @@
         $('form#documents_form').on('submit', function(e){
             e.preventDefault();
             $.ajax({
-                url: "../wp-content/themes/grumes/sections/mail.php",
+                url: "../wp-content/themes/bellavista/sections/mail.php",
                 data: $(this).serializeArray(),
                 method: 'POST'
             }).done(function(data) {
