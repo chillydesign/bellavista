@@ -494,6 +494,15 @@ section.section_photo_slide p {
     z-index: 10;
 }
 
+.featherlight-iframe .featherlight-content {
+    margin: 0;
+}
+
+.featherlight-iframe  iframe {
+    width: 90vw;
+    height: 94vh;
+}
+
 
 .vr_tour_container a.full_screen {
     width: 50px;
