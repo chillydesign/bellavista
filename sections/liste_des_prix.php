@@ -56,9 +56,20 @@
                             <ul>
 
                                 <li><strong>Appartement:</strong>  <?php the_sub_field('appartement'); ?> m<sup>2</sup></li>
-                                    <li><strong>Terrasse couverte:</strong>  <?php the_sub_field('balcon'); ?> m<sup>2</sup></li>
-                                    <li><strong>Terrasse non couverte:</strong>  <?php the_sub_field('terrasse'); ?> m<sup>2</sup></li>
-                                    <li><strong>Jardin:<br></strong>  <?php the_sub_field('jardin'); ?> m<sup>2</sup></li>
+                                    <li><strong>Terrasse couverte:</strong>  <?php $balcon = get_sub_field('balcon');
+                                    if($balcon AND $balcon >0){
+                                      echo $balcon . 'm<sup>2</sup>';
+                                    } else {echo '-';} ?></li>
+                                    <li><strong>Terrasse non couverte:</strong>
+                                      <?php $terrasse = get_sub_field('terrasse');
+                                      if($terrasse AND $terrasse >0){
+                                        echo $terrasse . 'm<sup>2</sup>';
+                                      } else {echo '-';} ?></li>
+                                    <li><strong>Jardin:<br><br></strong>
+                                      <?php $jardin = get_sub_field('jardin');
+                                      if($jardin AND $jardin >0){
+                                        echo $jardin . 'm<sup>2</sup>';
+                                      } else {echo '-';} ?></li>
                                     <li><strong>Surface pondérée:</strong>  <?php the_sub_field('ponderee'); ?> m<sup>2</sup></li>
                                     <li><strong>Cave:</strong>  <?php the_sub_field('cave'); ?></li>
                                 <li><strong>Prix de vente:</strong> <?php echo $prix_text; ?><br><em>Parking non compris</em></li>

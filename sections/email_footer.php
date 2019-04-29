@@ -9,7 +9,7 @@
                        <!--  <webversion style="color:#666666; text-decoration:underline; font-weight: bold;">View as a Web Page</webversion> -->
 
 
-                        <a href="https://bellavistaparc.ch">PromoLAC SA</a>, Route de Florissant 81, 1206 Genève, Suisse <br>
+                        <a href="https://bellavistaparc.ch">BatiLAC SA</a>, Route de Florissant 81, 1206 Genève, Suisse <br>
                         <a href="mailto:contact@promolac.ch">contact@promolac.ch</a> | <a href="tel:00 41 22 839 30 40">+41 22 839 30 40</a>
                       <!--   <unsubscribe style="color:#888888; text-decoration:underline;"><a href="">unsubscribe</a></unsubscribe> -->
                     </td>
