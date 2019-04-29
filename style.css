@@ -641,7 +641,12 @@ section.section_two_thirds_one_third {}
         margin: 0 0 5px;
     }
 
-
+  h5.rooms {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 1.3em;
+    margin: -20px 0 10px 3px;
+}
 
     g {
         opacity: 0;
