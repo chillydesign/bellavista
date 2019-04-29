@@ -45,7 +45,7 @@ if(!empty($_POST['email'])) {
       $mail->Port = 587;
       //$mail->SMTPDebug  = 2;
 
-      $mail->setFrom('contact@villasdesgrumes.ch', 'PromoLAC');
+      $mail->setFrom('contact@bellavistaparc.ch', 'PromoLAC');
       //$mail->addAddress('harvey.charles@gmail.com', 'Charles Harvey');     // Add a recipient
       $mail->addAddress($email);               // Name is optional
       $mail->addReplyTo('contact@promolac.ch', 'PromoLAC');
@@ -65,8 +65,8 @@ if(!empty($_POST['email'])) {
         <table cellspacing="0" cellpadding="0" border="0" width="100%">
           <tr>
                 <td style="padding: 40px; font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555;">
-                    <h1 style="line-height:120%;padding:00px;margin:0 0 30px">Villas des Grumes - Documentation</h1>
-                    <p>Merci pour votre intérêt pour notre nouvelle promotion les Villas des Grumes à Bex. Vous trouverez en pièce jointe la documentation demandée. </p>
+                    <h1 style="line-height:120%;padding:00px;margin:0 0 30px">Bella-Vista Parc - Documentation</h1>
+                    <p>Merci pour votre intérêt pour notre nouvelle promotion Bella-Vista Parc à Vessy. Vous trouverez en pièce jointe la documentation demandée. </p>
                     <p>Pour plus d\'informations n\'hésitez pas à nous contacter au +41 22 839 30 40 ou par email à l\'adresse <a href="mailto:contact@promolac.ch">contact@promolac.ch</a></p>';
 
 $body .= $download_sentence;
@@ -87,7 +87,7 @@ $body .= $download_sentence;
  $body .=  file_get_contents(dirname(__FILE__) . '/email_footer.php');
 
 
-      $mail->Subject = 'Documentation Villa des Grumes';
+      $mail->Subject = 'Documentation Bella-Vista-Parc';
       $mail->Body    = $body;
       $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
