@@ -45,10 +45,10 @@ if(!empty($_POST['email'])) {
       $mail->Port = 587;
       //$mail->SMTPDebug  = 2;
 
-      $mail->setFrom('contact@bellavistaparc.ch', 'PromoLAC');
+      $mail->setFrom('contact@bellavistaparc.ch', 'BatiLAC');
       //$mail->addAddress('harvey.charles@gmail.com', 'Charles Harvey');     // Add a recipient
       $mail->addAddress($email);               // Name is optional
-      $mail->addReplyTo('contact@promolac.ch', 'PromoLAC');
+      $mail->addReplyTo('contact@promolac.ch', 'BatiLAC');
       // $mail->addCC('cc@example.com');
       $mail->addBCC('contact@promolac.ch');
 
