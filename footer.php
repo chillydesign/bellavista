@@ -12,7 +12,7 @@
 
 			</div>
 			<div class="right_col col-sm-4">
-				<p>Website by <a href="https://webfactor.ch">WebFactor</a></p>
+				<p style="text-align:right;">Website by <a href="https://webfactor.ch">WebFactor</a></p>
 			</div>
 		</div>
 	</div>
