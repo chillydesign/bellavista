@@ -63,7 +63,7 @@ if (function_exists('add_theme_support'))
 \*------------------------------------*/
 
 function wf_version(){
-  return '0.1.8';
+  return '0.1.9';
 }
 
 
@@ -610,6 +610,22 @@ add_shortcode( 'chilly_map', 'chilly_map' );
 
 
 
+
+function bellavista_vr_tour( $atts, $content = null ) {
+
+    $attributes = shortcode_atts( array(
+
+    ), $atts );
+
+    $ret = '<div class="vr_tour_container">
+        <iframe style="width: 100%; height: 80vh;" src="https://visite-360.ch/1289-bella-vista/"></iframe>
+            <a href="https://visite-360.ch/1289-bella-vista/" data-featherlight="iframe" data-featherlight-iframe-style="border:none" class="full_screen">Full Screen</a>
+    </div>';
+
+    return $ret;;
+
+}
+add_shortcode( 'bellavista_vr_tour', 'bellavista_vr_tour' );
 
 
 

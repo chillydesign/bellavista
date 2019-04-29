@@ -170,6 +170,14 @@
 
 
 
+        var $vr_tour_container = $('.vr_tour_container');
+        var $full_screen = $('.full_screen');
+        $full_screen.on('click', function(e) {
+            e.preventDefault();
+
+        });
+
+
 
 
         $('form#documents_form').on('submit', function(e){
