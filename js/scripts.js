@@ -26,10 +26,10 @@
         });
 
         var $bxslider = $('.bxslider');
-        var $auto =  (  $bxslider.children().length < 2 ) ? false : true;
+        var $auto =  ($bxslider.children().length < 2 ) ? false : true;
         $bxslider.bxSlider({
             'pager': false,
-            'controls' : !$auto,
+            'controls' : false,
             // 'mode' : 'fade',
             'auto' : $auto,
             'mode' : 'fade'
