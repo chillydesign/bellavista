@@ -36,8 +36,8 @@
                 <nav>
                     <ul>
                         <?php chilly_nav('header_menu'); ?>
-                        <!-- <li class="facebook"><a href="https://www.facebook.com/lesvillasdesgrumes/">Facebook</a></li> -->
-                        <li class="youtube"><a href="https://www.youtube.com/watch?v=5Okzzhkv6nA">Youtube</a></li>
+                        <!-- <li class="facebook"><a target="_blank" href="https://www.facebook.com/lesvillasdesgrumes/">Facebook</a></li> -->
+                        <li class="youtube"><a target="_blank" href="https://www.youtube.com/watch?v=Nk6kDCJpcwY&amp;feature=youtu.be">Youtube</a></li>
                     </ul>
                 </nav>
                 <div class="clear"></div>
