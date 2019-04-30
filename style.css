@@ -353,7 +353,7 @@ a.branding {
 
 
 
-        header li.facebook a, header li.youtube a {
+        header li.social_link a {
             text-indent: 99999999999px;
             width: 0px;
             height: 50px;
@@ -363,10 +363,23 @@ a.branding {
             background-position: bottom 16px right;
             padding: 12px;
         }
-        header li.youtube a{
+
+        header li.social_link_facebook a{
+            background-image: url(img/icon_facebook.png); margin-left: 5px;
+        }
+
+        header li.social_link_youtube a{
             background-image: url(img/icon_youtube.png); margin-left: 5px;
         }
-        header li.facebook a:hover, header li.facebook a:active, header li.facebook a:focus, header li.youtube a:hover, header li.youtube a:active, header li.youtube a:focus  {
+
+        header li.social_link_vr a {
+            background-image: url(img/icon_vr.png);
+        }
+
+        header li.social_link a:hover,
+        header li.social_link a:active,
+        header li.social_link a:focus
+     {
             background-color: white!important;
             filter: grayscale(80%);
             -webkit-filter: grayscale(80%);

@@ -37,7 +37,8 @@
                     <ul>
                         <?php chilly_nav('header_menu'); ?>
                         <!-- <li class="facebook"><a target="_blank" href="https://www.facebook.com/lesvillasdesgrumes/">Facebook</a></li> -->
-                        <li class="youtube"><a target="_blank" href="https://www.youtube.com/watch?v=Nk6kDCJpcwY&amp;feature=youtu.be">Youtube</a></li>
+                        <li class="social_link social_link_youtube"><a target="_blank" href="https://www.youtube.com/watch?v=Nk6kDCJpcwY&amp;feature=youtu.be">Youtube</a></li>
+                        <li class="social_link social_link_vr"><a target="_blank" href="#">VR</a></li>
                     </ul>
                 </nav>
                 <div class="clear"></div>
