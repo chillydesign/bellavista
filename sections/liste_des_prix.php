@@ -85,7 +85,7 @@
                                 <!-- <img class="table_img" src="<?php echo $image['url']; ?>"> -->
                             <?php endif; // end if image; ?>
 
-                            <a target="_blank" href="<?php echo get_home_url();?>/wp-content/uploads/2019/04/20190430-Brochure.pdf">Brochure</a>
+                            <a href="<?php echo get_home_url();?>/documentation">Brochure</a>
                             <?php $nnn = (get_sub_field('number')) ? 'la villa ' .  get_sub_field('number') : 'une des villas' ; ?>
                             <?php $str =  htmlentities(' contact@batilac.ch?subject=Intérêt pour une propriété - Bella-Vista Parc&body=Bonjour Monsieur%2C%0A%0AJe serais intéressé par '  . $nnn  .   ' de votre promotion Bella-Vista Parc. Pourrions-nous convenir d\'un rendez-vous pour en discuter%3F%0A%0ACordialement,'  ); ?>
                             <!-- <a href="mailto:<?php //echo $str; ?>">Contact</a> -->
