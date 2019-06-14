@@ -22,12 +22,12 @@ if(!empty($_POST['email'])) {
 
     if(empty($_POST['docs'])) {
 
-         echo 'Veuillez sélectionner au moins un document ';
+          _e('Veuillez sélectionner au moins un document ', 'webfactor');
 
     } else {
       $docs = $_POST['docs'];
-      if (count($docs) == 1) {$download_sentence = '<p>Téléchargez le document demandé ci-dessous:</p>'; }
-      else {$download_sentence = '<p>Téléchargez les documents demandés ci-dessous:</p>';}
+      if (count($docs) == 1) {$download_sentence = _('<p>Téléchargez le document demandé ci-dessous:</p>', 'webfactor'); }
+      else {$download_sentence = _('<p>Téléchargez les documents demandés ci-dessous:</p>', 'webfactor');}
 
 
       require '../../../../vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
@@ -59,7 +59,7 @@ if(!empty($_POST['email'])) {
 
       $body =  file_get_contents(dirname(__FILE__) . '/email_header.php');
 
-      $body .= '<!-- 1 Column Text + Button : BEGIN -->
+      $body .= _('<!-- 1 Column Text + Button : BEGIN -->
 <tr>
     <td bgcolor="#ffffff">
         <table cellspacing="0" cellpadding="0" border="0" width="100%">
@@ -67,7 +67,7 @@ if(!empty($_POST['email'])) {
                 <td style="padding: 40px; font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555;">
                     <h1 style="line-height:120%;padding:00px;margin:0 0 30px">Bella-Vista Parc - Documentation</h1>
                     <p>Merci pour votre intérêt pour notre nouvelle promotion Bella-Vista Parc à Vessy. Vous trouverez en pièce jointe la documentation demandée. </p>
-                    <p>Pour plus d\'informations n\'hésitez pas à nous contacter au +41 22 839 30 40 ou par email à l\'adresse <a href="mailto:contact@batilac.ch">contact@batilac.ch</a></p>';
+                    <p>Pour plus d\'informations n\'hésitez pas à nous contacter au +41 22 839 30 40 ou par email à l\'adresse <a href="mailto:contact@batilac.ch">contact@batilac.ch</a></p>', 'webfactor');
 
 $body .= $download_sentence;
  foreach ($docs as $value) {
@@ -87,15 +87,15 @@ $body .= $download_sentence;
  $body .=  file_get_contents(dirname(__FILE__) . '/email_footer.php');
 
 
-      $mail->Subject = 'Documentation Bella-Vista-Parc';
+      $mail->Subject = _('Documentation Bella-Vista-Parc', 'webfactor');
       $mail->Body    = $body;
       $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
       if(!$mail->send()) {
-          echo 'Une erreur s\'est produite et le message n\'a pas pu être envoyé';
+          _e('Une erreur s\'est produite et le message n\'a pas pu être envoyé', 'webfactor');
           echo 'Mailer Error: ' . $mail->ErrorInfo;
       } else {
-          echo 'La documentation demandée vous a été envoyée sur votre adresse email';
+          _e('La documentation demandée vous a été envoyée sur votre adresse email', 'webfactor');
       }
 
 
@@ -105,10 +105,10 @@ $body .= $download_sentence;
 
 
 
-} elseif(empty($_POST['email']) AND empty($_POST['docs'])) {echo 'Veuillez saisir une adresse email et sélectionner au moins un document';}
+} elseif(empty($_POST['email']) AND empty($_POST['docs'])) { _e('Veuillez saisir une adresse email et sélectionner au moins un document', 'webfactor');}
 
 else {
-  echo 'Veuillez saisir une adresse email ';
+  _e('Veuillez saisir une adresse email ', 'webfactor');
 }
 
 ?>

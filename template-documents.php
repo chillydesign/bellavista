@@ -31,8 +31,8 @@
 			</div>
 			<div class="clear"></div>
 				<br>
-				<input class="email_input" type="email" name="email" placeholder="Adresse email">
-				<input id="email_submit" type="submit" value="Recevoir les documents">
+				<input class="email_input" type="email" name="email" placeholder="<?php _e('Adresse email', 'webfactor'); ?>">
+				<input id="email_submit" type="submit" value="<?php _e('Recevoir les documents', 'webfactor'); ?>">
 			</form>
 			<div id="form_message"></div>
 		</div>
