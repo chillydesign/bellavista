@@ -2,7 +2,7 @@
 require '../../../../wp-config.php';
 
 
- function my_icl_set_current_language($lang) {
+ function my_icl_set_current_language() {
   global $sitepress;
   if ( isset($_POST['language']))  {
     $lang = $_POST['language'];
