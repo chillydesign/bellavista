@@ -33,6 +33,7 @@
 				<br>
 				<input class="email_input" type="email" name="email" placeholder="<?php _e('Adresse email', 'webfactor'); ?>">
 				<input id="email_submit" type="submit" value="<?php _e('Recevoir les documents', 'webfactor'); ?>">
+				<input type="hidden" name="language" id="language" value="<?php echo ICL_LANGUAGE_CODE; ?>" />
 			</form>
 			<div id="form_message"></div>
 		</div>
