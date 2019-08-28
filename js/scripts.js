@@ -8,60 +8,60 @@
 
 
 
-        function is_nav_visible(){
-            if ($window.width()>1199) {
+        function is_nav_visible() {
+            if ($window.width() > 1199) {
                 $('header nav').removeClass('visible');
             }
         }
         is_nav_visible();
-        $window.on('resize', function(){
+        $window.on('resize', function () {
             is_nav_visible();
         })
 
 
 
-        $('#show_mobile_nav').on('click', function(e){
+        $('#show_mobile_nav').on('click', function (e) {
             e.preventDefault();
             $('#header nav ').toggleClass('visible');
         });
 
 
-        $('.bxslider').each(function(){
-          var $bxslider = $(this);
-          // var $bxslider = $('.bxslider');
-          console.log($bxslider.children().length );
-          var $auto =  ($bxslider.children().length < 2 ) ? false : true;
-          console.log($auto);
-          $bxslider.bxSlider({
-              'pager': false,
-              'controls' : false,
-              // 'mode' : 'fade',
-              'auto' : $auto,
-              'mode' : 'fade'
-          });
+        $('.bxslider').each(function () {
+            var $bxslider = $(this);
+            // var $bxslider = $('.bxslider');
+            console.log($bxslider.children().length);
+            var $auto = ($bxslider.children().length < 2) ? false : true;
+            console.log($auto);
+            $bxslider.bxSlider({
+                'pager': false,
+                'controls': false,
+                // 'mode' : 'fade',
+                'auto': $auto,
+                'mode': 'fade'
+            });
         })
 
 
 
 
         var $news_bxslider = $('.news_bxslider');
-        var $news_auto =  (  $news_bxslider.children().length < 2 ) ? false : true;
+        var $news_auto = ($news_bxslider.children().length < 2) ? false : true;
         $news_bxslider.bxSlider({
             'pager': false,
-            'controls' : !$news_auto,
+            'controls': !$news_auto,
             // 'mode' : 'fade',
-            'auto' : $news_auto
+            'auto': $news_auto
         });
 
 
 
-        $window.scroll(function(){
+        $window.scroll(function () {
 
             var windowScroll = $window.scrollTop();
 
             var $layer = $('.parallax_image');
-            var yPos = (windowScroll *   0.25 );
-            $layer.css({"transform" : "translate3d(0px, " + yPos + "px, 0px)"});
+            var yPos = (windowScroll * 0.25);
+            $layer.css({ "transform": "translate3d(0px, " + yPos + "px, 0px)" });
 
 
         });
@@ -78,7 +78,7 @@
 
 
 
-        $('.branding').each(function(){
+        $('.branding').each(function () {
             var $this = $(this);
             var $text = $this.html();
             var $start = $text.substring(0, 3);
@@ -87,13 +87,13 @@
             $this.html($html);
         })
 
-        $('.plus').each(function(){
+        $('.plus').each(function () {
             var $this = $(this);
             var $id = $this.attr('id');
-            var $class= '.' + $id;
-            $this.on('click', function(){
+            var $class = '.' + $id;
+            $this.on('click', function () {
                 var $this = $(this);
-                if($this.hasClass('activeplus')){
+                if ($this.hasClass('activeplus')) {
                     $this.removeClass('activeplus');
                     $($class).slideUp();
                 } else {
@@ -111,18 +111,18 @@
 
         var $villa_slider = $('.villa_slider').bxSlider({
             'pager': false,
-            'controls' : true,
-            'auto' : false,
-            onSlideAfter: function(slide) {
+            'controls': true,
+            'auto': false,
+            onSlideAfter: function (slide) {
                 $('g', $svg).removeClass('visible');
-                showVillaOnSVG(  slide );
+                showVillaOnSVG(slide);
 
 
             }
         });
 
 
-        function showVillaOnSVG( $villatr) {
+        function showVillaOnSVG($villatr) {
             $('g', $svg).removeClass('visible');
             var $layer = $villatr.data('layer');
             $($layer, $svg).addClass("visible");
@@ -134,35 +134,35 @@
 
 
 
-        $('.villa_tr.unavailable').each(function(){
+        $('.villa_tr.unavailable').each(function () {
             var $layer = $(this).data('layer');
-            $($layer).addClass( "greyhouse"  );
+            $($layer).addClass("greyhouse");
         })
 
-        $('.villa_tr.booked').each(function(){
+        $('.villa_tr.booked').each(function () {
             var $layer = $(this).data('layer');
-            $($layer).addClass( "lightbrownhouse"  );
+            $($layer).addClass("lightbrownhouse");
         })
 
 
-        $('.villa_tr').on('touchstart', function(){
-            showVillaOnSVG(  $(this) );
+        $('.villa_tr').on('touchstart', function () {
+            showVillaOnSVG($(this));
 
         })
 
 
-        $('g', $svg).on('mouseover', function(){
+        $('g', $svg).on('mouseover', function () {
             // $(this).attr('class', "visible"  );
             var $this = $(this);
-            $this.addClass( "half_visible"  );
+            $this.addClass("half_visible");
 
 
-        }).on('mouseout', function(){
+        }).on('mouseout', function () {
             var $this = $(this);
             // $(this).attr('class', ""  );
             $this.removeClass("half_visible");
 
-        }).on('click', function() {
+        }).on('click', function () {
             // when click on svg, find the villa its referring to and slide the villaslider to the right place
             var $this = $(this);
             var $id = $this.attr('id');
@@ -179,7 +179,7 @@
 
         var $vr_tour_container = $('.vr_tour_container');
         var $full_screen = $('.full_screen');
-        $full_screen.on('click', function(e) {
+        $full_screen.on('click', function (e) {
             e.preventDefault();
 
         });
@@ -187,13 +187,14 @@
 
 
 
-        $('form#documents_form').on('submit', function(e){
+        $('form#documents_form').on('submit', function (e) {
             e.preventDefault();
+            var $action = $(this).attr('action');
             $.ajax({
-                url: "../wp-content/themes/bellavista/sections/mail.php",
+                url: $action,
                 data: $(this).serializeArray(),
                 method: 'POST'
-            }).done(function(data) {
+            }).done(function (data) {
                 $('#form_message').html(data);
                 $('#form_message').show();
 
@@ -210,23 +211,23 @@
 
 // CHILLY MAP
 // CHILLY MAP
-function drawNewMap( location ) {
+function drawNewMap(location) {
     if (typeof google !== 'undefined') {
         var map_options = {
             zoom: 11,
             mapTypeControl: true,
             scrollwheel: false,
             draggable: true,
-            navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
+            navigationControlOptions: { style: google.maps.NavigationControlStyle.SMALL },
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
 
-        var map_container =  document.getElementById( location.container  );
-        var map = new google.maps.Map( map_container , map_options);
+        var map_container = document.getElementById(location.container);
+        var map = new google.maps.Map(map_container, map_options);
 
         var latitude = location.lat;
         var longitude = location.lng;
-        var latlng = new google.maps.LatLng(  latitude , longitude);
+        var latlng = new google.maps.LatLng(latitude, longitude);
         var marker = new google.maps.Marker({
             map: map,
             position: latlng,
@@ -234,7 +235,7 @@ function drawNewMap( location ) {
         });
 
         map.setZoom(12);
-        map.setCenter( latlng );
+        map.setCenter(latlng);
 
     } // end of google defined
 } // end of drawNewMap

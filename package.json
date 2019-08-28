@@ -5,8 +5,9 @@
   "main": "index.php",
   "dependencies": {},
   "devDependencies": {
-    "gulp": "^4.0.1",
-    "gulp-real-favicon": "^0.3.2"
+    "gulp": "^4.0.2",
+    "gulp-real-favicon": "^0.3.2",
+    "lodash": ">=4.17.13"
   },
   "scripts": {
     "test": "say hello"
