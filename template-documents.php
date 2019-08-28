@@ -16,7 +16,7 @@
 		<section style="padding-top:0; margin-top:-50px;">
 
 		<div class="container">
-			<form id="documents_form"  action="<?php echo get_template_directory_uri(); ?>/sections/mail.php"  method="post">
+			<form id="documents_form"  action="<?php echo site_url(); ?>/wp-content/themes/bellavista/sections/mail.php"  method="post">
 			<div class="doc_options">
 			<?php $i = 1; ?>
 			<?php while ( have_rows('downloads') ) : the_row(); ?>
