@@ -1,5 +1,5 @@
 <?php
-
+require '../../../../wp-config.php';
 
 if(!empty($_POST['email'])) {
 
@@ -26,8 +26,8 @@ if(!empty($_POST['email'])) {
 
     } else {
       $docs = $_POST['docs'];
-      if (count($docs) == 1) {$download_sentence = _('<p>Téléchargez le document demandé ci-dessous:</p>', 'webfactor'); }
-      else {$download_sentence = _('<p>Téléchargez les documents demandés ci-dessous:</p>', 'webfactor');}
+      if (count($docs) == 1) {$download_sentence = __('<p>Téléchargez le document demandé ci-dessous:</p>', 'webfactor'); }
+      else {$download_sentence = __('<p>Téléchargez les documents demandés ci-dessous:</p>', 'webfactor');}
 
 
       require '../../../../vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
@@ -59,7 +59,7 @@ if(!empty($_POST['email'])) {
 
       $body =  file_get_contents(dirname(__FILE__) . '/email_header.php');
 
-      $body .= _('<!-- 1 Column Text + Button : BEGIN -->
+      $body .= __('<!-- 1 Column Text + Button : BEGIN -->
 <tr>
     <td bgcolor="#ffffff">
         <table cellspacing="0" cellpadding="0" border="0" width="100%">
@@ -87,7 +87,7 @@ $body .= $download_sentence;
  $body .=  file_get_contents(dirname(__FILE__) . '/email_footer.php');
 
 
-      $mail->Subject = _('Documentation Bella-Vista-Parc', 'webfactor');
+      $mail->Subject = __('Documentation Bella-Vista-Parc', 'webfactor');
       $mail->Body    = $body;
       $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
