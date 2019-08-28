@@ -2,12 +2,11 @@
 require '../../../../wp-config.php';
 
 
-add_action('init', 'my_icl_set_current_language');
-  function my_icl_set_current_language($lang) {
+ function my_icl_set_current_language($lang) {
   global $sitepress;
   if ( isset($_POST['language']))  {
     $lang = $_POST['language'];
-    $sitepress->switch_lang($lang);
+    $sitepress->switch_lang($lang, true);
   }
 
 }
@@ -18,6 +17,8 @@ add_action('init', 'my_icl_set_current_language');
 if(!empty($_POST['email'])) {
 
   $email =$_POST['email'];
+
+  my_icl_set_current_language();
 
 
     function clean_string($string) {
