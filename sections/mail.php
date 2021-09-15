@@ -60,7 +60,7 @@ if(!empty($_POST['email'])) {
       $mail->Port = 587;
       //$mail->SMTPDebug  = 2;
 
-      $mail->setFrom('contact@bellavistaparc.ch', 'BatiLAC');
+      $mail->setFrom('contact@batilac.ch', 'BatiLAC');
       //$mail->addAddress('harvey.charles@gmail.com', 'Charles Harvey');     // Add a recipient
       $mail->addAddress($email);               // Name is optional
       $mail->addReplyTo('contact@batilac.ch', 'BatiLAC');
@@ -125,5 +125,3 @@ $body .= $download_sentence;
 else {
   _e('Veuillez saisir une adresse email ', 'webfactor');
 }
-
-?>

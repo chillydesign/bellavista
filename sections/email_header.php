@@ -1,16 +1,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-	<meta charset="utf-8"> <!-- utf-8 works for most cases -->
-	<meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
-	<title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
 
-	<!-- Web Font / @font-face : BEGIN -->
-	<!-- NOTE: If web fonts are not required, lines 9 - 26 can be safely removed. -->
+    <!-- Web Font / @font-face : BEGIN -->
+    <!-- NOTE: If web fonts are not required, lines 9 - 26 can be safely removed. -->
 
-	<!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
-	<!--[if mso]>
+    <!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+    <!--[if mso]>
 		<style>
 			* {
 				font-family: sans-serif !important;
@@ -18,21 +19,20 @@
 		</style>
 	<![endif]-->
 
-	<!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
-	<!--[if !mso]><!-->
-		<!-- insert web font reference, eg: <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> -->
-	<!--<![endif]-->
+    <!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
+    <!--[if !mso]><!-->
+    <!-- insert web font reference, eg: <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> -->
+    <!--<![endif]-->
 
-	<!-- Web Font / @font-face : END -->
+    <!-- Web Font / @font-face : END -->
 
-  	<!-- CSS Reset -->
+    <!-- CSS Reset -->
     <style>
-
-		/* What it does: Remove spaces around the email design added by some email clients. */
-		/* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+        /* What it does: Remove spaces around the email design added by some email clients. */
+        /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
         html,
         body {
-	        margin: 0 auto !important;
+            margin: 0 auto !important;
             padding: 0 !important;
             height: 100% !important;
             width: 100% !important;
@@ -46,7 +46,7 @@
 
         /* What is does: Centers email on Android 4.4 */
         div[style*="margin: 16px 0"] {
-            margin:0 !important;
+            margin: 0 !important;
         }
 
         /* What it does: Stops Outlook from adding extra spacing to tables. */
@@ -63,46 +63,46 @@
             table-layout: fixed !important;
             margin: 0 auto !important;
         }
+
         table table table {
             table-layout: auto;
         }
 
         /* What it does: Uses a better rendering method when resizing images in IE. */
         img {
-            -ms-interpolation-mode:bicubic;
+            -ms-interpolation-mode: bicubic;
         }
 
         /* What it does: A work-around for iOS meddling in triggered links. */
         .mobile-link--footer a,
         a[x-apple-data-detectors] {
-            color:inherit !important;
+            color: inherit !important;
             text-decoration: underline !important;
         }
-
     </style>
 
     <!-- Progressive Enhancements -->
     <style>
-
         /* What it does: Hover styles for buttons */
         .button-td,
         .button-a {
             transition: all 100ms ease-in;
         }
+
         .button-td:hover,
         .button-a:hover {
             background: #4a417b !important;
             border-color: #4a417b !important;
         }
-
     </style>
 
 </head>
+
 <body width="100%" bgcolor="#f5f5f5" style="margin: 0;">
     <center style="width: 100%; background: #f5f5f5;">
 
         <!-- Visually Hidden Preheader Text : BEGIN -->
-<!--         <div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: sans-serif;">
+        <!--         <div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: sans-serif;">
             (Optional) This text will appear in the inbox preview, but not the email body.
         </div> -->
         <!-- Visually Hidden Preheader Text : END -->
@@ -120,7 +120,7 @@
             <![endif]-->
 
             <!-- Email Header : BEGIN -->
-<!--             <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 600px;" role="presentation">
+            <!--             <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 600px;" role="presentation">
 				<tr>
 					<td style="padding: 20px 0; text-align: center">
 						<img src="http://placehold.it/200x50" width="200" height="50" alt="alt_text" border="0">
@@ -129,25 +129,25 @@
             </table> -->
             <!-- Email Header : END -->
 
-                <!-- Clear Spacer : BEGIN -->
-                <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 600px;" role="presentation">
+            <!-- Clear Spacer : BEGIN -->
+            <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 600px;" role="presentation">
                 <tr>
                     <td height="20" style="font-size: 0; line-height: 0;">
                         &nbsp;
                     </td>
                 </tr>
-                </table>
-                <!-- Clear Spacer : END -->
+            </table>
+            <!-- Clear Spacer : END -->
 
             <!-- Email Body : BEGIN -->
             <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 600px;" role="presentation">
 
                 <!-- Hero Image, Flush : BEGIN -->
                 <tr>
-					<td bgcolor="#ffffff" align="center">
+                    <td bgcolor="#ffffff" align="center">
 
-                        <a href="https://bellavistaparc.ch" target="_blank"><img src="https://webfactor.ch/projets/bellavista/wp-content/themes/bellavista/img/logo-bellavista.png" width="600" height=""  border="0" align="left" style="width: 160px; margin: 15px;">
-						<img src="https://bellavistaparc.ch/wp-content/uploads/2019/04/1289_Ext_00.jpg" width="600" height="" border="0" align="center" style="width: 100%; max-width: 600px;"></a>
-					</td>
+                        <a href="https://batilac.ch/bellavistaparc/" target="_blank"><img src="https://batilac.ch/bellavistaparc/wp-content/themes/bellavista/img/logo-bellavista.png" width="600" height="" border="0" align="left" style="width: 160px; margin: 15px;">
+                            <img src="https://bellavistaparc.ch/wp-content/uploads/2019/04/1289_Ext_00.jpg" width="600" height="" border="0" align="center" style="width: 100%; max-width: 600px;"></a>
+                    </td>
                 </tr>
                 <!-- Hero Image, Flush : END -->
